@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AUTO SPOT - Premium Auto Service Website + Mini Customer Portal
 
-## Getting Started
+High-converting automotive website built with:
 
-First, run the development server:
+- Next.js (App Router)
+- React 18 + TypeScript
+- Tailwind CSS
+- Framer Motion
+- shadcn/ui
+- React Hook Form + Zod
+- Zustand
+- Embla Carousel
+
+## 1) Install and Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Production checks:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## 2) Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```txt
+app/
+  page.tsx
+  services/page.tsx
+  services/[slug]/page.tsx
+  pricing/page.tsx
+  booking/page.tsx
+  quote/page.tsx
+  results/page.tsx
+  fleet/page.tsx
+  about/page.tsx
+  contact/page.tsx
+  faq/page.tsx
+  track/page.tsx
+  api/bookings/route.ts
+  api/quotes/route.ts
+components/
+data/
+lib/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3) Edit Services, Prices, Reviews, FAQ, Gallery, Business Info
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Update the following files:
 
-## Deploy on Vercel
+- Services catalog: `data/services.ts`
+- Packages/pricing: `data/packages.ts`
+- Testimonials: `data/testimonials.ts`
+- FAQ: `data/faqs.ts`
+- Gallery images: `data/gallery.ts`
+- Maintenance guide: `data/maintenanceGuide.ts`
+- Business contact/hours/map: `data/business.ts`
+- Shared media assets: `data/media.ts`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 4) Replace Images, Map, Contact Details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Replace hero/shop/team images in `data/media.ts`.
+- Replace service images in `data/services.ts`.
+- Replace gallery entries in `data/gallery.ts`.
+- Replace logo and favicon SVG files:
+  - `public/auto-spot-logo.svg`
+  - `public/auto-spot-mark.svg`
+  - `app/icon.svg`
+- Replace map links in `data/business.ts`:
+  - `mapUrl`
+  - `mapEmbedUrl`
+- Replace phone/email/address/WhatsApp in `data/business.ts`.
+
+## 5) Booking + Tracking (Mock Backend)
+
+- Create bookings: `POST /api/bookings`
+- Track booking by reference: `GET /api/bookings?reference=AS-...`
+- Quote estimator API (optional): `POST /api/quotes`
+- Storage is in-memory for demo purposes (`lib/mock-db.ts`).
+
+## 6) Deploy to Vercel
+
+1. Push this project to GitHub.
+2. Import repo in Vercel.
+3. Build command: `npm run build`
+4. Output: default Next.js output.
+5. Deploy.
+
+No extra environment variables are required for the current mock setup.

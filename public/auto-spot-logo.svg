@@ -1,0 +1,10 @@
+<svg width="940" height="220" viewBox="0 0 940 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="204" height="204" rx="42" fill="#0A111B"/>
+  <rect x="20" y="20" width="180" height="180" rx="34" stroke="#F7C66D" stroke-opacity="0.42" stroke-width="3"/>
+  <path d="M52 159L94 66H116L158 159H134L124 136H87L78 159H52Z" fill="#F4C86A"/>
+  <path d="M93 114H116L105 90L93 114Z" fill="#0A111B"/>
+  <circle cx="160" cy="56" r="9" fill="#F4C86A"/>
+  <text x="248" y="108" fill="#F8FAFC" font-family="Sora, Manrope, sans-serif" font-size="74" font-weight="700" letter-spacing="6">AUTO SPOT</text>
+  <text x="252" y="150" fill="#94A3B8" font-family="Manrope, sans-serif" font-size="22" letter-spacing="7">PRECISION AUTO SERVICES</text>
+</svg>
+

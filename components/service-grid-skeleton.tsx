@@ -1,0 +1,18 @@
+import { Skeleton } from "@/components/ui/skeleton";
+
+export function ServiceGridSkeleton({ count = 6 }: { count?: number }) {
+  return (
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {Array.from({ length: count }).map((_, index) => (
+        <div key={index} className="space-y-3 rounded-2xl border border-white/10 bg-slate-900/80 p-5">
+          <Skeleton className="h-5 w-20" />
+          <Skeleton className="h-6 w-3/4" />
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-4/5" />
+          <Skeleton className="h-10 w-full" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
